@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IEDC</title>
+
+    <!-- links -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+    />
+
+    <!-- internal stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <figure class="circle">
+      <figure class="inner"></figure>
+    </figure>
+
+    <div class="parent">
+      <div class="btndiv">
+        <button id="ibtn" class="btn btn-grad" onclick="btnclick()">
+          <span style="transform: translateZ(20px)">Inagurate</span>
+        </button>
+      </div>
+      <div id="hidediv" class="hidemagic">
+        <h1>
+          <span style="color: gray">A Perfect Platform for</span>
+          <span id="tstring" class="text-slider-items">
+            A Developer , A Creator, A Enterprenonor
+          </span>
+          <span class="text-slider"></span>
+        </h1>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="tilt.jquery.js"></script>
+    <script src="./script.js"></script>
+    <!-- <script>
+      confetti.start();
+    </script> -->
+    <script>
+      function btnclick() {
+        hide = document.getElementById("hidediv");
+        t = document.getElementById("text");
+        ibtn = document.getElementById("ibtn");
+        // t.style.display = "block";
+        ibtn.style.display = "none";
+        hide.style.display = "block";
+        document.getElementById("tstring").style.color = "lightblue";
+        celebrate();
+      }
+    </script>
+    <script>
+      if ($(".text-slider").length == 1) {
+        var typed_strings = $(".text-slider-items").text();
+        var typed = new Typed(".text-slider", {
+          strings: typed_strings.split(", "),
+          typeSpeed: 100,
+          // loop: true,
+          loop: true,
+          backDelay: 900,
+          backSpeed: 30,
+        });
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".btn-grad").tilt({
+          maxTilt: 5,
+          // glare:true,  // Enables glare effect
+          maxGlare: 5,
+          scale: 1.2,
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".circle").tilt({
+          maxTilt: 5,
+          // glare:true,  // Enables glare effect
+          maxGlare: 5,
+        });
+      });
+    </script>
+  </body>
+</html>
