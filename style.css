@@ -128,7 +128,8 @@ h1 {
 }
 .inner-a {
   display: block;
-  z-index: 2;
+  position: absolute;
+  z-index: -2;
   opacity: 0.5;
   border-radius: 50%;
   height: 150px;
@@ -142,7 +143,7 @@ h1 {
 }
 .inner-b {
   display: block;
-  z-index: 3;
+  z-index: -2;
   opacity: 0.5;
   border-radius: 50%;
   height: 150px;
