@@ -23,7 +23,7 @@
   </head>
   <body>
     <div class="parent">
-      <figure class="circle">
+      <figure class="circle" id="bigcircle">
         <img
           style="width: 80px; height: 80px; margin-left: 0.5rem"
           src="logo.png"
@@ -61,11 +61,13 @@
     </script> -->
     <script>
       function btnclick() {
+        bigCircle = document.getElementById("bigcircle");
         hide = document.getElementById("hidediv");
         t = document.getElementById("text");
         ibtn = document.getElementById("ibtn");
         // t.style.display = "block";
         ibtn.style.display = "none";
+        bigCircle.style.marginTop = "0px";
         hide.style.display = "block";
         document.getElementById("tstring").style.color = "lightblue";
         celebrate();
